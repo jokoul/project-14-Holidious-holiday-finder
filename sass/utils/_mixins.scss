@@ -1,0 +1,31 @@
+@mixin position(
+  $position: unset,
+  $top: unset,
+  $right: unset,
+  $bottom: unset,
+  $left: unset
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin dimension($width: unset, $height: unset) {
+  width: $width;
+  height: $height;
+}
+@mixin flexbox($display: flex, $justify: unset, $align: unset) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin texte_style($font-size: unset, $font-weight: unset, $color: unset) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
+@mixin margin($margin: unset, $padding: unset) {
+  margin: $margin;
+  padding: $padding;
+}

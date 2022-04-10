@@ -1,0 +1,29 @@
+.footer {
+  background-color: #eee;
+  @include margin($margin: 5rem 0 0 0, $padding: 2rem);
+  .container {
+    @include flexbox($display: flex, $justify: space-between, $align: center);
+    & p:nth-child(2):hover {
+      transform: scale(1.05);
+    }
+    p:nth-child(2) a {
+      color: $orange-clr;
+      text-decoration: none;
+    }
+  }
+  .social-media {
+    @include flexbox($display: flex, $justify: space-evenly, $align: center);
+    & li {
+      list-style-type: none;
+      a:hover {
+        color: $orange-clr;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+}

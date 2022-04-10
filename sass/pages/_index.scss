@@ -1,0 +1,58 @@
+/*Add a cover background picture for the featured part with a fixed height*/
+.jumbotron {
+  background: url("../../img/pexels-vincent-gerbouin-1174732.jpg") center center;
+  background-size: cover; //we get rid of "center center" after url() and also change "cover" by 100% 100% to allow image to adjust ratio vertically and horizontally at any time.
+  height: 45rem;
+  &--logo img {
+    @include dimension($width: 6rem, $height: 6rem);
+  }
+  &--featured {
+    @include margin($margin: 2rem 0 0 0);
+
+    .title {
+      text-shadow: 3px 3px 5px $orange-clr;
+    }
+    .subTitle {
+      @include texte_style($font-size: 1.7rem, $font-weight: 500);
+      text-shadow: 3px 3px 5px $orange-clr;
+    }
+  }
+}
+
+.trial {
+  text-align: center;
+  &--title {
+    font-weight: 700;
+    margin: 2rem;
+  }
+  &--images > img {
+    width: 15rem;
+    margin: 2rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .jumbotron {
+    height: 35rem;
+    margin: 0;
+    &--logo img {
+      @include dimension($width: 4rem, $height: 4rem);
+    }
+  }
+  .trial--images img {
+    width: 10rem;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .jumbotron {
+    height: 50rem;
+    .container {
+      padding: 0;
+    }
+    &--logo img {
+      @include dimension($width: 4rem, $height: 4rem);
+    }
+  }
+}

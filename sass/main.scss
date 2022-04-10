@@ -1,0 +1,27 @@
+//importation par ordre selon l'architecture des dossiers SASS
+//appelé "pattern 7-1"
+
+//@import "./vendors/";
+
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/functions";
+@import "./utils/extensions";
+@import "./utils/keyframes";
+
+@import "./base/base";
+@import "./base/typography";
+
+//@import "./layout/container";
+@import "./layout/footer";
+@import "./layout/form";
+@import "./layout/header";
+//@import "./layout/nav";
+@import "./layout/loader";
+
+@import "./pages/index";
+@import "./pages/company";
+
+@import "./components/buttons";
+
+//@import "./themes/";
