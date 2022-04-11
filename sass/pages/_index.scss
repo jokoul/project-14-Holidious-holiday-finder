@@ -1,6 +1,6 @@
 /*Add a cover background picture for the featured part with a fixed height*/
 .landPage {
-  background: url("../../img/pexels-vincent-gerbouin-1174732.jpg") center center;
+  background: url("../../img/vincent.jpg") center center;
   background-size: cover; //we get rid of "center center" after url() and also change "cover" by 100% 100% to allow image to adjust ratio vertically and horizontally at any time.
   height: 45rem;
   &--logo img {

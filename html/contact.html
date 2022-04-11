@@ -33,13 +33,18 @@
     <title>Holidious - Holiday finder home</title>
   </head>
   <body>
-    <div class="wrapperCompany">
+    <div class="loader">
+      <span class="loaderSpan load1"></span>
+      <span class="loaderSpan load2"></span>
+      <span class="loaderSpan load3"></span>
+    </div>
+    <div class="wrapperContact">
       <!--Nav bar-->
 
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html">
-            <img src="../img/logo/LogoMakr-0AVhcg.png" alt="logo" />
+            <img src="../img/logo/holidious-logo.png" alt="logo" />
             Holidious
           </a>
           <button
@@ -81,13 +86,68 @@
       <section class="jumbotron heading">
         <div class="container">
           <h1 class="display-4 my-5 fw-bold">
-            Contact us for any question or a quote.
+            Contact us for a quote or any question.
           </h1>
         </div>
       </section>
       <!--Instruction-->
-      <section class="instruction">
-        <div class="container"></div>
+      <section class="form container">
+        <form action="index.php" method="post">
+          <div class="row">
+            <div class="form-group col-md-6 mb-3">
+              <label class="form-label" for="firstname">firstname</label>
+              <input
+                class="form-control"
+                type="text"
+                id="firstname"
+                name="firstname"
+                placeholder="Joan"
+              />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label class="form-label" for="Email">Email</label>
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="fa-solid fa-at"></i
+                ></span>
+                <input
+                  class="form-control"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Joankouloumba90@gmail.com"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label" for="story">Text</label>
+            <textarea
+              class="form-control"
+              id="story"
+              rows="5"
+              placeholder="Tell us everything..."
+            ></textarea>
+          </div>
+          <div class="form-group mb-3">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="agreement"
+                required
+              />
+              <label for="agreement">I agree to terms and conditions.</label>
+            </div>
+          </div>
+          <button
+            class="btn border-2 border-dark fw-bold form--btn"
+            type="submit"
+          >
+            Submit form
+          </button>
+        </form>
       </section>
 
       <!--footer-->

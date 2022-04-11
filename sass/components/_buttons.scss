@@ -135,6 +135,10 @@
   }
 }
 
+.form--btn {
+  background-color: $yellow-clr;
+}
+
 @media screen and (max-width: 480px) {
   .buttons a {
     margin-top: 1rem;

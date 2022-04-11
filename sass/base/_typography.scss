@@ -32,6 +32,16 @@
   color: $white-clr;
 }
 
+.wrapperContact .heading {
+  text-shadow: 2px 2px 5px $yellow-clr;
+}
+
+@media screen and (max-width: 300px) {
+  .gallery--card {
+    font-size: 0.8rem;
+  }
+}
+
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .landPage--featured {
     text-align: center;
