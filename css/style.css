@@ -22,12 +22,32 @@
     display: none;
   }
 }
+@keyframes showGallery {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes rotateLike {
+  0% {
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 * {
   margin: 0;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arvo", serif;
   font-size: 1.2rem;
   font-weight: unset;
   color: unset;
@@ -39,7 +59,7 @@ a {
 }
 
 /*LAND PAGE*/
-.jumbotron--featured {
+.landPage--featured {
   color: #fff;
 }
 
@@ -53,28 +73,42 @@ a {
 .footer {
   font-size: 1.2rem;
   text-align: center;
+  color: #fff;
 }
 
 /*HOME PAGE*/
+.wrapperCompany {
+  color: #fff;
+}
+
 .navbar-brand {
   font-size: 1.9rem;
   font-weight: 700;
   color: unset;
 }
 
+.heading {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.offer--button {
+  color: #fff;
+}
+
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  .jumbotron--featured {
+  .landPage--featured {
     text-align: center;
   }
 }
 @media screen and (max-width: 480px) {
-  .jumbotron--featured {
+  .landPage--featured {
     text-align: center;
     font-size: 1rem;
   }
 }
 .footer {
-  background-color: #eee;
+  background: rgba(0, 0, 0, 0.5);
   margin: 5rem 0 0 0;
   padding: 2rem;
 }
@@ -108,12 +142,21 @@ a {
   }
 }
 .navbar {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
 }
 .navbar-brand img {
-  width: 5rem;
+  width: 4rem;
+}
+.navbar-collapse .nav-link:hover {
+  border-bottom: 5px solid #ff7b00;
+  padding-bottom: 3px;
 }
 
+@media screen and (max-width: 768px) {
+  .nav-link {
+    width: 20%;
+  }
+}
 .loader {
   z-index: 1;
   position: fixed;
@@ -130,7 +173,7 @@ a {
   animation: loadHide 3s 4s forwards;
 }
 .loaderSpan {
-  background-color: aqua;
+  background-color: #19b7b7;
   border-radius: 50%;
   margin: 5rem 0.5rem;
   animation: bouncingLoader 0.7s infinite alternate;
@@ -143,23 +186,23 @@ a {
 }
 
 /*Add a cover background picture for the featured part with a fixed height*/
-.jumbotron {
+.landPage {
   background: url("../../img/pexels-vincent-gerbouin-1174732.jpg") center center;
   background-size: cover;
   height: 45rem;
 }
-.jumbotron--logo img {
+.landPage--logo img {
   width: 6rem;
   height: 6rem;
 }
-.jumbotron--featured {
+.landPage--featured {
   margin: 2rem 0 0 0;
   padding: unset;
 }
-.jumbotron--featured .title {
+.landPage--featured .title {
   text-shadow: 3px 3px 5px #ff7b00;
 }
-.jumbotron--featured .subTitle {
+.landPage--featured .subTitle {
   font-size: 1.7rem;
   font-weight: 500;
   color: unset;
@@ -179,11 +222,11 @@ a {
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  .jumbotron {
+  .landPage {
     height: 35rem;
     margin: 0;
   }
-  .jumbotron--logo img {
+  .landPage--logo img {
     width: 4rem;
     height: 4rem;
   }
@@ -194,13 +237,13 @@ a {
   }
 }
 @media screen and (max-width: 480px) {
-  .jumbotron {
+  .landPage {
     height: 50rem;
   }
-  .jumbotron .container {
+  .landPage .container {
     padding: 0;
   }
-  .jumbotron--logo img {
+  .landPage--logo img {
     width: 4rem;
     height: 4rem;
   }
@@ -210,6 +253,199 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.heading {
+  background-color: transparent;
+  color: #fff;
+}
+
+.instruction .cardImg {
+  height: 130px;
+}
+
+.wrapperOffer {
+  background-color: #19b7b7;
+}
+
+.details span {
+  margin: 0 0.25rem;
+}
+.details span i {
+  margin: 0 0.25rem;
+}
+
+.gallery {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.gallery--card {
+  padding: 0;
+  position: relative;
+  animation: showGallery 1.5s ease-in-out both;
+}
+.gallery--card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.gallery--card .overlay {
+  position: absolute;
+  top: unset;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #09c548;
+  overflow: hidden;
+  transition: all 0.7s ease;
+}
+.gallery--card:hover .overlay {
+  height: 100%;
+  padding: 1rem;
+}
+.gallery--card:hover .like i {
+  animation: rotateLike 1s ease-in-out;
+}
+.gallery--card:nth-child(2) {
+  padding: 0;
+  position: relative;
+  animation-delay: 0.5s;
+}
+.gallery--card:nth-child(2) img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.gallery--card:nth-child(2) .overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #09c548;
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+  transition: all 0.7s ease;
+}
+.gallery--card:nth-child(2):hover .overlay {
+  bottom: 0;
+  height: 100%;
+  padding: 1rem;
+}
+.gallery--card:nth-child(3) {
+  padding: 0;
+  position: relative;
+  animation-delay: 1s;
+}
+.gallery--card:nth-child(3) img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.gallery--card:nth-child(3) .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  background-color: #09c548;
+  width: 0%;
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.7s ease;
+}
+.gallery--card:nth-child(3):hover .overlay {
+  right: 0;
+  width: 100%;
+  padding: 1rem;
+}
+.gallery--card:nth-child(4) {
+  padding: 0;
+  position: relative;
+  animation-delay: 1.5s;
+}
+.gallery--card:nth-child(4) img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.gallery--card:nth-child(4) .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #09c548;
+  width: 0%;
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.7s ease;
+}
+.gallery--card:nth-child(4):hover .overlay {
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+}
+.gallery--card:nth-child(5) {
+  padding: 0;
+  position: relative;
+  animation-delay: 1s;
+}
+.gallery--card:nth-child(5) img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.gallery--card:nth-child(5) .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  background-color: #09c548;
+  width: 0%;
+  overflow: hidden;
+  height: 0;
+  transition: all 0.7s ease;
+}
+.gallery--card:nth-child(5):hover .overlay {
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+.gallery--card:nth-child(6) {
+  padding: 0;
+  position: relative;
+  animation-delay: 0.5s;
+}
+.gallery--card:nth-child(6) img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.gallery--card:nth-child(6) .overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  right: 0;
+  background-color: #09c548;
+  width: 0%;
+  overflow: hidden;
+  height: 0%;
+  transition: all 0.7s ease;
+}
+.gallery--card:nth-child(6):hover .overlay {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
 }
 
 .buttons {
@@ -223,6 +459,118 @@ a {
 }
 .buttons a:hover {
   background-color: #522516;
+}
+
+.offer--button {
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  background-color: rgba(255, 123, 0, 0.6);
+}
+
+.offer--button:hover {
+  background-color: transparent;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.review .like i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.review .like i:hover {
+  transform: scale(1.2);
+}
+.review .star .block1 {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.review .star .block1 .fa-solid {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: 50% 25%;
+  transition: opacity 0.4s, transform 0.7s;
+}
+.review .star .block1 .fa-regular {
+  position: absolute;
+}
+.review .star .block1:hover .fa-solid {
+  background: linear-gradient(15deg, #ff7b00 7%, #dffa02 93%);
+  opacity: 1;
+  transform: scale(1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.review .star .block1:hover .fa-regular {
+  background: linear-gradient(15deg, #ff7b00 7%, #dffa02 93%);
+  position: absolute;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.review .star .block2 {
+  position: relative;
+  left: 3rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.review .star .block2 .fa-solid {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: 25% 25%;
+  transition: opacity 0.4s, transform 0.7s;
+}
+.review .star .block2 .fa-regular {
+  position: absolute;
+}
+.review .star .block2:hover .fa-solid {
+  background: linear-gradient(15deg, #ff7b00 7%, #dffa02 93%);
+  opacity: 1;
+  transform: scale(1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.review .star .block2:hover .fa-regular {
+  position: absolute;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.review .star .block3 {
+  position: relative;
+  left: 6rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.review .star .block3 .fa-solid {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: 75% 75%;
+  transition: opacity 0.4s, transform 0.7s;
+}
+.review .star .block3 .fa-regular {
+  position: absolute;
+}
+.review .star .block3:hover .fa-solid {
+  background: linear-gradient(15deg, #ff7b00 7%, #dffa02 93%);
+  opacity: 1;
+  transform: scale(1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.review .star .block3:hover .fa-regular {
+  background: linear-gradient(15deg, #ff7b00 7%, #dffa02 93%);
+  position: absolute;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 @media screen and (max-width: 480px) {

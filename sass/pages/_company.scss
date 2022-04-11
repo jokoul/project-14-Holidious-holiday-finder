@@ -4,3 +4,12 @@
   background-size: cover;
   background-attachment: fixed;
 }
+.heading {
+  background-color: transparent;
+  color: $white-clr;
+}
+.instruction {
+  .cardImg {
+    height: 130px;
+  }
+}

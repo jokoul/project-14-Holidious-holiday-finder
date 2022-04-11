@@ -1,5 +1,5 @@
 /*LAND PAGE*/
-.jumbotron--featured {
+.landPage--featured {
   color: $white-clr;
 }
 
@@ -11,22 +11,35 @@
 .footer {
   font-size: 1.2rem;
   text-align: center;
+  color: $white-clr;
 }
 /*HOME PAGE*/
+.wrapperCompany {
+  color: $white-clr;
+}
 .navbar {
   &-brand {
     @include texte_style($font-size: 1.9rem, $font-weight: 700);
   }
 }
 
+.heading {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.offer--button {
+  color: $white-clr;
+}
+
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  .jumbotron--featured {
+  .landPage--featured {
     text-align: center;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .jumbotron--featured {
+  .landPage--featured {
     text-align: center;
     font-size: 1rem;
   }

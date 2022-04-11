@@ -1,5 +1,5 @@
 .footer {
-  background-color: #eee;
+  background: rgba($color: #000000, $alpha: 0.5);
   @include margin($margin: 5rem 0 0 0, $padding: 2rem);
   .container {
     @include flexbox($display: flex, $justify: space-between, $align: center);

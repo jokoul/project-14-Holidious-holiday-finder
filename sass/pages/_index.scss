@@ -1,5 +1,5 @@
 /*Add a cover background picture for the featured part with a fixed height*/
-.jumbotron {
+.landPage {
   background: url("../../img/pexels-vincent-gerbouin-1174732.jpg") center center;
   background-size: cover; //we get rid of "center center" after url() and also change "cover" by 100% 100% to allow image to adjust ratio vertically and horizontally at any time.
   height: 45rem;
@@ -32,7 +32,7 @@
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  .jumbotron {
+  .landPage {
     height: 35rem;
     margin: 0;
     &--logo img {
@@ -46,7 +46,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .jumbotron {
+  .landPage {
     height: 50rem;
     .container {
       padding: 0;

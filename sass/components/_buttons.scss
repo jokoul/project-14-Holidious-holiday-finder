@@ -10,6 +10,131 @@
   }
 }
 
+.offer--button {
+  border: 2px solid $white-clr;
+  border-radius: 1rem;
+  background-color: rgba(255, 123, 0, 0.6);
+}
+
+.offer--button:hover {
+  background-color: transparent;
+  color: $white-clr;
+  transform: scale(1.05);
+}
+
+.review {
+  .like {
+    i {
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .star {
+    .block1 {
+      position: relative;
+      cursor: pointer;
+      font-size: 1.7rem;
+      .fa-solid {
+        position: absolute;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: 50% 25%;
+        transition: opacity 0.4s, transform 0.7s;
+      }
+      .fa-regular {
+        position: absolute;
+      }
+      &:hover {
+        .fa-solid {
+          background: linear-gradient(15deg, $orange-clr 7%, $yellow-clr 93%);
+          opacity: 1;
+          transform: scale(1);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+        .fa-regular {
+          background: linear-gradient(15deg, $orange-clr 7%, $yellow-clr 93%);
+          position: absolute;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+      }
+    }
+    .block2 {
+      position: relative;
+      left: 3rem;
+      cursor: pointer;
+      font-size: 1.7rem;
+      .fa-solid {
+        position: absolute;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: 25% 25%;
+        transition: opacity 0.4s, transform 0.7s;
+      }
+      .fa-regular {
+        position: absolute;
+      }
+      &:hover {
+        .fa-solid {
+          background: linear-gradient(15deg, $orange-clr 7%, $yellow-clr 93%);
+          opacity: 1;
+          transform: scale(1);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+        .fa-regular {
+          //background: linear-gradient(15deg, $orange-clr 7%, $yellow-clr 93%);
+          position: absolute;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+      }
+    }
+    .block3 {
+      position: relative;
+      left: 6rem;
+      cursor: pointer;
+      font-size: 1.7rem;
+      .fa-solid {
+        position: absolute;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: 75% 75%;
+        transition: opacity 0.4s, transform 0.7s;
+      }
+      .fa-regular {
+        position: absolute;
+      }
+      &:hover {
+        .fa-solid {
+          background: linear-gradient(15deg, $orange-clr 7%, $yellow-clr 93%);
+          opacity: 1;
+          transform: scale(1);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+        .fa-regular {
+          background: linear-gradient(15deg, $orange-clr 7%, $yellow-clr 93%);
+          position: absolute;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 480px) {
   .buttons a {
     margin-top: 1rem;
