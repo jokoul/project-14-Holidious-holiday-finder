@@ -2,9 +2,15 @@
   margin: 0;
 }
 
+html {
+  height: 100%;
+  min-height: 100%;
+}
+
 body {
   font-family: "Arvo", serif;
   @include texte_style($font-size: 1.2rem);
+  min-height: 100%;
 }
 
 a {

@@ -46,11 +46,17 @@
   margin: 0;
 }
 
+html {
+  height: 100%;
+  min-height: 100%;
+}
+
 body {
   font-family: "Arvo", serif;
   font-size: 1.2rem;
   font-weight: unset;
   color: unset;
+  min-height: 100%;
 }
 
 a {
@@ -198,6 +204,9 @@ a {
 .landPage {
   background: url("../../img/vincent.jpg") center center;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   height: 45rem;
 }
 .landPage--logo img {
@@ -418,7 +427,7 @@ a {
 .buttons a {
   background-color: rgba(82, 37, 22, 0.5);
   border-radius: 10px;
-  margin-right: 1.5rem;
+  margin: 0 1.5rem;
 }
 .buttons a:hover {
   background-color: #522516;

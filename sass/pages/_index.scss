@@ -2,6 +2,9 @@
 .landPage {
   background: url("../../img/vincent.jpg") center center;
   background-size: cover; //we get rid of "center center" after url() and also change "cover" by 100% 100% to allow image to adjust ratio vertically and horizontally at any time.
+  -webkit-background-size: cover; //we get rid of "center center" after url() and also change "cover" by 100% 100% to allow image to adjust ratio vertically and horizontally at any time.
+  -moz-background-size: cover; //we get rid of "center center" after url() and also change "cover" by 100% 100% to allow image to adjust ratio vertically and horizontally at any time.
+  -o-background-size: cover; //we get rid of "center center" after url() and also change "cover" by 100% 100% to allow image to adjust ratio vertically and horizontally at any time.
   height: 45rem;
   &--logo img {
     @include dimension($width: 6rem, $height: 6rem);
